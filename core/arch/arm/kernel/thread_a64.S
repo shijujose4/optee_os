@@ -97,6 +97,11 @@ FUNC thread_resume , :
 	b	eret_to_el0
 END_FUNC thread_resume
 
+FUNC thread_hvc , :
+	hvc	#0
+	ret
+END_FUNC thread_hvc
+
 FUNC thread_smc , :
 	smc	#0
 	ret
